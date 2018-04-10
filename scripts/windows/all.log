@@ -1,0 +1,118 @@
+2017-07-14 11:23:47.934 [main] INFO  com.ethercis.vehr.Launcher - Server starting on host:192.168.2.104 port:8080
+2017-07-14 11:23:47.992 [main] INFO  com.ethercis.vehr.VEhrGateServlet - Starting VEhrGate...
+2017-07-14 11:23:48.008 [main] INFO  com.ethercis.servicemanager.jmx.JmxWrapper - JMX over RMI is switched off, for details see http://www.ehrserver.org/ehrserver/doc/requirements/admin.jmx.html#jconsole
+2017-07-14 11:23:48.009 [main] INFO  com.ethercis.servicemanager.runlevel.RunlevelManager - Change request from run level HALTED to run level RUNNING ...
+2017-07-14 11:23:48.095 [main] INFO  com.ethercis.servicemanager.service.ServiceClassScanner - Resolving class definition:com.ethercis
+2017-07-14 11:23:49.176 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.vehr.AccessGateService
+2017-07-14 11:23:49.179 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=9, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.182 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.vehr.RequestDispatcher
+2017-07-14 11:23:49.183 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=8, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.183 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.authenticate.service.AuthenticateService
+2017-07-14 11:23:49.183 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=7, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=5, onShutdownRunlevel=8, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.183 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.ehr.knowledge.CacheKnowledgeService
+2017-07-14 11:23:49.184 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.184 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.logonservice.LogonService
+2017-07-14 11:23:49.185 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=3, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=7, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=5, onShutdownRunlevel=8, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.185 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.logonservice.security.ServiceSecurityManager
+2017-07-14 11:23:49.186 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=6, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=5, onShutdownRunlevel=8, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.186 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.persistence.ResourceService
+2017-07-14 11:23:49.186 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=2, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=2, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.186 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.compositionservice.CompositionService
+2017-07-14 11:23:49.187 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.187 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.systemservice.SystemService
+2017-07-14 11:23:49.187 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=3, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=3, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.187 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.ehrservice.EhrService
+2017-07-14 11:23:49.187 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.188 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.vehr.parser.EhrScapeURIParser
+2017-07-14 11:23:49.188 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=7, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=1, onShutdownRunlevel=7, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.188 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.query.QueryService
+2017-07-14 11:23:49.188 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.189 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Found Service class com.ethercis.graphql.GraphQLService
+2017-07-14 11:23:49.189 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - loadServiceActions @com.ethercis.servicemanager.annotation.RunLevelActions(value=[@com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=-1, onFail=resource.configuration.serviceFailed, onStartupRunlevel=9, action=LOAD), @com.ethercis.servicemanager.annotation.RunLevelAction(sequence=4, onShutdownRunlevel=9, onFail=resource.configuration.serviceFailed, onStartupRunlevel=-1, action=STOP)])
+2017-07-14 11:23:49.189 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.vehr.AccessGateService
+2017-07-14 11:23:49.189 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.vehr.RequestDispatcher
+2017-07-14 11:23:49.189 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.authenticate.service.AuthenticateService
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.ehr.knowledge.CacheKnowledgeService
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.logonservice.LogonService
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.logonservice.security.ServiceSecurityManager
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.persistence.ResourceService
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.compositionservice.CompositionService
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.systemservice.SystemService
+2017-07-14 11:23:49.190 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.ehrservice.EhrService
+2017-07-14 11:23:49.191 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.vehr.parser.EhrScapeURIParser
+2017-07-14 11:23:49.191 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.query.QueryService
+2017-07-14 11:23:49.191 [main] INFO  com.ethercis.servicemanager.service.ServiceHolderAnnotationFactory - Service com.ethercis.graphql.GraphQLService
+2017-07-14 11:23:49.201 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Setting 'host.name' to 'CHRISTIAN-PC'
+2017-07-14 11:23:49.263 [main] INFO  com.ethercis.vehr.parser.EhrScapeURIParser - EhrScape URI parser service started...
+2017-07-14 11:23:49.267 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:49.273 [main] INFO  com.ethercis.logonservice.LogonService - Logon service started...
+2017-07-14 11:23:49.277 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'AuthenticateService' found. Will attach it logonservice 'admin/AuthenticateService' to '/ehrserver/service/AuthenticateService'
+2017-07-14 11:23:49.283 [main] INFO  CacheKnowledgeService - Starting CacheKnowledgeService version=1.0
+2017-07-14 11:23:49.707 [main] ERROR com.ethercis.ehr.knowledge.KnowledgeCache - Could not parse operational template:IDCR - End of Life Patient Preferences.v0 error:org.apache.xmlbeans.XmlException: error: Unexpected element: OPEN_TAG
+2017-07-14 11:23:49.897 [main] ERROR com.ethercis.ehr.knowledge.KnowledgeCache - Could not parse operational template:DR_Screening error:org.apache.xmlbeans.XmlException: error: Unexpected element: CDATA
+2017-07-14 11:23:49.897 [main] INFO  CacheKnowledgeService - CacheKnowledgeService successfully started
+2017-07-14 11:23:49.898 [main] INFO  CacheKnowledgeService - Statistics:
+
+
+Found Archetype Definitions    :0
+Found openEHR Templates        :0
+Found Operational Templates    :57
+In-cache Archetypes            :0
+In-cache Templates             :0
+In-cache generated locatable   :0
+Global template index          :48
+Processing errors found        :2
+=== INTERNAL ====
+Force Cache              :true
+Cache Generated Locatable:false
+Archetype Path           :C:\Users\christian\Documents\EtherCIS\home\etc/knowledge/archetypes
+Template Path            :C:\Users\christian\Documents\EtherCIS\home\etc/knowledge/templates
+Backup Path              :C:\Users\christian\Documents\EtherCIS\home\etc/knowledge/backup
+Operational Template Path:C:\Users\christian\Documents\EtherCIS\home\etc/knowledge/operational_templates
+
+2017-07-14 11:23:49.898 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'CacheKnowledgeService' found. Will attach it logonservice 'admin/CacheKnowledgeService' to '/ehrserver/service/CacheKnowledgeService'
+2017-07-14 11:23:49.901 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:49.909 [main] INFO  com.ethercis.dao.access.support.DataAccess - DBCP2_POOL BasicDataSource (http://commons.apache.org/proper/commons-dbcp/configuration.html)
+2017-07-14 11:23:49.922 [main] INFO  com.ethercis.dao.access.support.DataAccess - url: jdbc:postgresql://localhost:5434/ethercis
+2017-07-14 11:23:49.922 [main] INFO  com.ethercis.dao.access.support.DataAccess - setPoolPreparedStatements: true
+2017-07-14 11:23:49.922 [main] INFO  com.ethercis.dao.access.support.DataAccess - Pool setDefaultTestOnBorrow: true
+2017-07-14 11:23:50.068 [main] INFO  com.ethercis.dao.access.support.DataAccess - Pool max_connections: 10
+2017-07-14 11:23:50.069 [main] INFO  com.ethercis.dao.access.support.DataAccess - Pool max_wait_millisec: 60
+2017-07-14 11:23:50.069 [main] INFO  com.ethercis.dao.access.support.DataAccess - 
+2017-07-14 11:23:50.069 [main] INFO  com.ethercis.dao.access.support.DataAccess - Database connection uses DBCP2 CONNECTION POOLING
+2017-07-14 11:23:50.070 [main] INFO  com.ethercis.persistence.ResourceService - DB access set to DBCP2 POOLING
+2017-07-14 11:23:50.070 [main] INFO  com.ethercis.persistence.ResourceService - ResourceService started...
+2017-07-14 11:23:50.070 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'ResourceService' found. Will attach it logonservice 'admin/ResourceService' to '/ehrserver/service/ResourceService'
+2017-07-14 11:23:50.071 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:50.074 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:50.075 [main] INFO  com.ethercis.compositionservice.CompositionService - Composition service started...
+2017-07-14 11:23:50.075 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'CompositionService' found. Will attach it logonservice 'admin/CompositionService' to '/ehrserver/service/CompositionService'
+2017-07-14 11:23:50.076 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:50.077 [main] INFO  com.ethercis.ehrservice.EhrService - Subject identification mode is set to:EXTERNAL_REF
+2017-07-14 11:23:50.078 [main] INFO  com.ethercis.ehrservice.EhrService - EhrService service started...
+2017-07-14 11:23:50.078 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'EhrService' found. Will attach it logonservice 'admin/EhrService' to '/ehrserver/service/EhrService'
+2017-07-14 11:23:50.079 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:50.079 [main] INFO  com.ethercis.query.QueryService - QueryService service started...
+2017-07-14 11:23:50.079 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'QueryService' found. Will attach it logonservice 'admin/QueryService' to '/ehrserver/service/QueryService'
+2017-07-14 11:23:50.082 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:50.238 [main] INFO  com.ethercis.graphql.GraphQLService - GraphQLService service started...
+2017-07-14 11:23:50.238 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - MBean 'GraphQLService' found. Will attach it logonservice 'admin/GraphQLService' to '/ehrserver/service/GraphQLService'
+2017-07-14 11:23:50.241 [main] WARN  com.ethercis.servicemanager.cluster.ClusterInfo - errorCode=user.configuration message=#1.0.0 exception when getting property 'dispatcher.map' : ServiceManagerException errorCode=[resource.configuration] serverSideException=true node=[ehrserver] location=[Property.UnknownVariable] message=[#1.0.0 Unknown variable ${dispatcher.map.config} : ]
+2017-07-14 11:23:50.245 [main] INFO  com.ethercis.servicemanager.service.ServiceClassScanner - Resolving class definition:com.ethercis
+2017-07-14 11:23:51.084 [main] WARN  com.ethercis.servicemanager.cluster.ClusterInfo - errorCode=user.configuration message=#1.0.0 exception when getting property 'dispatcher.map' : ServiceManagerException errorCode=[resource.configuration] serverSideException=true node=[ehrserver] location=[Property.UnknownVariable] message=[#1.0.0 Unknown variable ${dispatcher.map.config} : ]
+2017-07-14 11:23:51.085 [main] INFO  com.ethercis.servicemanager.cluster.ClusterInfo - Running in Query compatibility mode:EHRSCAPE, query root:/rest/v1
+2017-07-14 11:23:51.086 [main] ERROR com.ethercis.servicemanager.cluster.ClusterInfo - Unable to load service identified as:SessionLoggerService,1.0. Please check your code...
+2017-07-14 11:23:51.086 [main] WARN  com.ethercis.vehr.AccessGateService - sessionLoggerService is not loaded, no session logging will be done
+2017-07-14 11:23:51.086 [main] INFO  com.ethercis.vehr.AccessGateService - Gate service started...
+2017-07-14 11:23:51.086 [main] INFO  com.ethercis.vehr.VEhrGateServlet - Total memory allocated = 241.696 MBytes. Free memory available = 155.819 MBytes.
+2017-07-14 11:23:51.086 [main] INFO  com.ethercis.vehr.VEhrGateServlet - ehrserver is ready for requests  [ 1 sec 894 millis ]
+2017-07-14 11:23:51.087 [main] INFO  com.ethercis.vehr.VEhrGateServlet - VEhrGate initializeSession complete
+2017-07-14 11:23:51.201 [main] INFO  com.ethercis.vehr.VEhrGateServlet - Starting VEhrGate...
+2017-07-14 11:23:51.202 [main] INFO  com.ethercis.vehr.VEhrGateServlet - Servlet thread pool size:20
+2017-07-14 11:23:51.203 [main] INFO  com.ethercis.vehr.VEhrGateServlet - Servlet time out:10000 [ms]
+2017-07-14 11:23:51.203 [main] INFO  com.ethercis.vehr.VEhrGateServlet - Server mode is set to ASYNCHRONOUS
+2017-07-14 11:23:51.204 [main] INFO  com.ethercis.vehr.VEhrGateServlet - VEhrGate initializeSession complete
+2017-07-14 11:23:51.270 [main] INFO  com.ethercis.vehr.Launcher - Server listening at:http://christian-PC:8080/
+2017-07-14 11:26:05.321 [Signal catcher thread for controlled shudown] INFO  com.ethercis.servicemanager.cluster.SignalCatcher - Shutdown forced by user or signal (Ctrl-C).
+2017-07-14 11:26:05.321 [Signal catcher thread for controlled shudown] INFO  com.ethercis.vehr.VEhrGateServlet - Shutdown requested by context, closing down...
+2017-07-14 11:26:05.322 [Signal catcher thread for controlled shudown] INFO  com.ethercis.servicemanager.runlevel.RunlevelManager - Change request from run level RUNNING to run level HALTED ...

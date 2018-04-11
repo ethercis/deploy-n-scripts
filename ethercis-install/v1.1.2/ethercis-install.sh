@@ -465,7 +465,7 @@ export JOOQ_URL=jdbc:postgresql://\${JOOQ_DB_HOST}:\${JOOQ_DB_PORT}/\${JOOQ_DB_S
 export JOOQ_DB_LOGIN=\${ECIS_PG_ID}
 export JOOQ_DB_PASSWORD=\${ECIS_PG_PWD}
 
-export CLASSPATH=\$LIB_DEPLOY/1.1.2/*:\$SYSLIB/ecis_dependencies/*:\$SYSLIB/openehr-java-lib/*
+export CLASSPATH=\$LIB_DEPLOY/1.1.2/*:\$SYSLIB/ecis-dependencies/*:\$SYSLIB/openehr-java-lib/*
 
 # launch server
 # ecis server is run as user ethercis

@@ -1,7 +1,9 @@
 Ethercis Platform Installation
 ==============================
 
-C.Chevalley, Ripple Foundation, 17.11.2017, rev. Apr. 10, 2018.
+v1.1.2 Apr 11, 2018
+
+C.Chevalley, Ripple Foundation
 
 How to install an EtherCIS platform (eg. ethercis server + postgresql DB).
 
@@ -55,13 +57,9 @@ Installation Process
 
 	```#> cd /usr/local/src```
 
-3. get the release archive from GitHub (copy the link from GitHub)
+3. clone/get the installation repository for v1.1.2 from GitHub (copy the link from GitHub)
 
-    ```#>wget https://github.com/ethercis/ethercis/releases/download/v1.1.0-test/ethercis-install.tar.gz```
-
-4. extract the archive in the install directory
-
-    ```#> tar xvfz ethercis-install.tar.gz```
+4. go in the v1.1.2 directory for the following
 
 5. Install Postgresql 10 (this can take several minutes...)
 
@@ -132,6 +130,8 @@ Make sure hostname is bound to the IP address (answer 'y' to "Do you want to upd
 
 Running ethercis
 ----
+
+NB. EtherCIS script is installed in ethercis home directory!
 
     #> cd ~ethercis
     #> ./ecis-server start
@@ -204,6 +204,28 @@ TROUBLE SHOOTING
 
 Port 8080 should be open at a minimum.
 
+If you need to open the port after the installation.
+
+1. check the active zone:
+
+```# firewall-cmd --get-active-zones```
+
+```public
+     interfaces: enp0s3
+```
+
+2. open the port(s) as required
+
+```# firewall-cmd --zone=public --add-port=8000/tcp --permanent```
+
+```# firewall-cmd --zone=public --add-port=8080/tcp --permanent```
+
+3. Reload the firewall
+
+```# firewall-cmd --reload```
+
+4. check the result as indicated above
+
 #### EtherCIS IP address is not bound to the right interface
 
 The binding should be something similar to:
@@ -226,6 +248,23 @@ if the status is unactive (dead) start the server:
 	#> systemctl start postgresql-10
 
 And recheck the status (logs can be checked in /var/lib/pgsql/10/data/log
+
+#### The install process is blocking on YUM (CentOS)
+
+If the installation is blocked with a repeating message telling the following:
+
+```Another app is currently holding the yum lock; waiting for it ```
+
+You can stop the yum update process as follows
+
+```ps ax | grep yum```
+
+And kill the process by:
+
+```kill <PID of the yum update process>```
+
+and check if the process is actually killed (repeat the ps command)
+
 
 Windows Installation Notes
 ======

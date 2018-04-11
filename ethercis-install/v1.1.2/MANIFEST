@@ -121,31 +121,47 @@ total 8
 drwxrwxrwx. 2 root root 4096 Nov 14 22:56 deploy
 drwxrwxrwx. 2 root root 4096 Nov 14 22:56 system
 
-ecis_opt_lib/deploy:
-total 208912
--rwxrwxrwx. 1 root root  1676602 Nov  9 23:16 aql-processor-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 15669270 Oct 15 23:21 ecis-authenticate-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root  5421200 Oct 30 22:37 ecis-composition-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 15099038 Oct 15 22:58 ecis-core-1.1.1-SNAPSHOT.jar
--rwxrwxrwx. 1 root root  8567487 Nov 14 04:37 ecis-ehrdao-1.1.0-patch.jar
--rwxrwxrwx. 1 root root 17421744 Oct 15 23:22 ecis-ehr-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root  7800536 Oct 15 22:57 ecis-knowledge-cache-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 17623118 Oct 15 23:21 ecis-knowledge-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 15724947 Oct 15 23:21 ecis-logon-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 16487718 Oct 15 23:21 ecis-party-identified-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root  1450927 Nov 17  2016 ecis-query-service-1.0.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 16498033 Oct 15 23:21 ecis-resource-access-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 12457388 Oct 15 23:21 ecis-servicemanager-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 16487430 Oct 15 23:22 ecis-system-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 15096099 Oct 15 22:58 ecis-transform-1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root  6385248 Oct 15 22:57 ecis-validation-1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root 21543845 Oct 15 23:22 ecis-vehr-service-1.1.0-SNAPSHOT.jar
--rwxrwxrwx. 1 root root  2475877 Oct 15 22:57 jooq-pg-1.1.0-SNAPSHOT.jar
+ecis_opt_lib/deploy/1.1.2:
 
-ecis_opt_lib/system:
-total 1440
--rwxrwxrwx. 1 root root 248916 May 12  2014 adl-parser-1.0.9.jar
--rwxrwxrwx. 1 root root 416996 Aug 20  2014 ecis-openehr.jar
--rwxrwxrwx. 1 root root 648268 Apr 28  2015 ehrxml.jar
--rwxrwxrwx. 1 root root  28060 Apr  5  2015 oet-parser.jar
--rwxrwxrwx. 1 root root 125471 Jul  2  2014 types.jar
+aql-processor-1.1.2-SNAPSHOT.jar
+ecis-authenticate-service-1.1.2-SNAPSHOT.jar
+ecis-composition-service-1.1.2-SNAPSHOT.jar
+ecis-core-1.1.2-SNAPSHOT.jar
+ecis-ehrdao-1.1.2-SNAPSHOT.jar
+ecis-ehr-service-1.1.2-SNAPSHOT.jar
+ecis-knowledge-cache-1.1.2-SNAPSHOT.jar
+ecis-knowledge-service-1.1.2-SNAPSHOT.jar
+ecis-logon-service-1.1.2-SNAPSHOT.jar
+ecis-party-identified-service-1.1.2-SNAPSHOT.jar
+ecis-query-service-1.1.2-SNAPSHOT.jar
+ecis-resource-access-service-1.1.2-SNAPSHOT.jar
+ecis-servicemanager-1.1.2-SNAPSHOT.jar
+ecis-system-service-1.1.2-SNAPSHOT.jar
+ecis-transform-1.1.2-SNAPSHOT.jar
+ecis-validation-1.1.2-SNAPSHOT.jar
+ecis-vehr-service-1.1.2-SNAPSHOT.jar
+ecis-webtemplate-1.1.2-SNAPSHOT.jar
+jooq-pg-1.1.2-SNAPSHOT.jar
+
+ecis_opt_lib/system/ecis-dependencies:
+
+CompositionTemplate.jar
+composition_xml.jar
+jooq-3.7.3.jar
+openEHR.v1.OperationalTemplate.jar
+openEHR.v1.Template.jar
+postgresql-9.4.1212.jar
+thinkehr-framework-jsonlib-2.3.0-JL32.jar
+types.jar
+
+ecis_opt_lib/system/openehr-java-lib:
+
+mini-termserv-1.0.14-ec1-SNAPSHOT.jar
+openehr-aom-1.0.14-ec1-SNAPSHOT.jar
+openehr-rm-domain-1.0.14-ec1-SNAPSHOT.jar
+xml-binding-1.0.14-ec1-SNAPSHOT.jar
+oet-parser-1.0.14-ec1-SNAPSHOT.jar
+openehr-rm-core-1.0.14-ec1-SNAPSHOT.jar
+rm-builder-1.0.14-ec1-SNAPSHOT.jar
+
+

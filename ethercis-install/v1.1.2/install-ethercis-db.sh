@@ -2,6 +2,8 @@
 
 #declares supported versions and how to access RPMs
 #Postgresql 9.6 and 10 are supported (more will be added later)
+# use this script whenever Postgresql is already installed but ethercis DB not yet configured.
+# this is sometime needed whenever the install failed for system/network reason
 
 declare -A pg96rpm
 
@@ -57,25 +59,6 @@ ARCHITECTURE=`uname -p`
 PG_RPM_ID=${OS_ID}-${OS_VERSION}-${ARCHITECTURE}
 PG_RPM=${PG_RPM_ARRAY}[${PG_RPM_ID}]
 
-#perform a global update of the OS (required for CentOS7 as GIT could run with incompatible mode
-#initializing DB (RH, CentOS, Fedora23)
-if [[ ${OS_ID}-${OS_VERSION} = "rhel-7" ]] || [[ ${OS_ID}-${OS_VERSION} = "centos-7" ]] || ${OS_ID}-${OS_VERSION} = "fedora-23" ]]; then
-    while true; do
-      read -p "A global update of the OS will be performed, do you wish to do this update [y/n] ? " choice
-      case "$choice" in
-          y|Y )
-            echo "Updating OS (this can take a significant time to complete..."
-            yum update -y
-            break
-            ;;
-        n|N )
-            break;;
-        * )
-        echo "Please input Y or N"
-      esac
-    done
-fi
-
 #echo ${PG_RPM}
 
 PG_RPM_ARCHIVE=${!PG_RPM}
@@ -94,40 +77,23 @@ export PATH=$PATH:"/usr/pgsql-${PG_VERSION_SHORT}/bin"
 
 mkdir -p install
 cd install
-wget ${PG_RPM_ARCHIVE}
-#get the pgp key
-rpm --import http://yum.postgresql.org/RPM-GPG-KEY-PGDG-${PG_VERSION_SHORT}
-#install the repos
-rpm -ivh *.rpm
-
-#installing required packages
-yum -y install ${PG_PACKAGES}
-
-#installing required extension (temporal_tables, jsquery)
-yum clean all
-yum -y groupinstall "Development tools"
-yum -y install git
 
 #now ready to install the extensions
 #temporal_tables
-echo "Installing temporal_tables extension"
 git clone https://github.com/arkhipov/temporal_tables || { echo "Could not clone temporal_tables repository, exiting..." && exit 1; }
 cd temporal_tables
 make
 make install
 cd ..
 rm -rf temporal_tables
-echo "Done"
 
 #jsquery
-echo "Installing jsquery extension"
 git clone https://github.com/postgrespro/jsquery || { echo "Could not clone jsquery repository, exiting..." && exit 1; }
 cd jsquery
 make USE_PGXS=1
 make install USE_PGXS=1
 cd ..
 rm -rf jsquery
-echo "Done"
 
 #initializing DB (RH, CentOS, Fedora23)
 if [[ ${OS_ID}-${OS_VERSION} = "rhel-7" ]] || [[ ${OS_ID}-${OS_VERSION} = "centos-7" ]] || ${OS_ID}-${OS_VERSION} = "fedora-23" ]]; then

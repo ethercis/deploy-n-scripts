@@ -210,7 +210,8 @@ If you need to open the port after the installation.
 
 ```# firewall-cmd --get-active-zones```
 
-```public
+```
+public
      interfaces: enp0s3
 ```
 

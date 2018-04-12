@@ -185,6 +185,175 @@ Please modify the environment variable if you use another version of java (f.e. 
 By default, ethercis ships with a collection of precompiled operational templates to help getting started. These
 templates are located by default in /etc/opt/ecis/knowledge/operational_templates.
 
+Checking the DB installation
+================
+
+This can be quite helpful in case of doubt ;)
+
+1. get a shell for user 'postgres'
+
+```
+[root@localhost v1.1.2]# su - postgres
+-bash-4.2$
+```
+
+2. run psql
+
+```
+-bash-4.2$ psql
+psql (10.3)
+Type "help" for help.
+```
+
+3. connect to DB ethercis
+
+```
+postgres=# \c ethercis
+You are now connected to database "ethercis" as user "postgres".
+```
+
+4. Get the list of schema for DB ethercis
+
+```
+ethercis=# \dn
+  List of schemas
+  Name  |  Owner
+--------+----------
+ ehr    | postgres
+ ext    | ethercis
+ public | postgres
+(3 rows)
+```
+
+5. Check if the functions are properly configured
+
+Functions used to encode a composition as canonical json
+
+```
+\df ehr.*
+                                     List of functions
+ Schema |        Name         | Result data type  |      Argument data types       |  Type
+--------+---------------------+-------------------+--------------------------------+--------
+ ehr    | iso_timestamp       | character varying | timestamp with time zone       | normal
+ ehr    | js_archetyped       | json              | text, text                     | normal
+ ehr    | js_code_phrase      | json              | text, text                     | normal
+ ehr    | js_composition      | json              | uuid                           | normal
+ ehr    | js_context          | json              | uuid                           | normal
+ ehr    | js_context_setting  | json              | uuid                           | normal
+ ehr    | js_dv_coded_text    | json              | text, json                     | normal
+ ehr    | js_dv_date_time     | json              | timestamp with time zone, text | normal
+ ehr    | js_dv_text          | json              | text                           | normal
+ ehr    | js_party            | json              | uuid                           | normal
+ ehr    | js_party_identified | json              | text, json                     | normal
+ ehr    | js_party_ref        | json              | text, text, text, text         | normal
+ ehr    | object_version_id   | json              | uuid, text, integer            | normal
+(13 rows)
+```
+
+List jsquery extension
+
+```
+	\df jsq*     
+ 								List of functions
+         Schema |       Name        | Result data type | Argument data types |  Type
+        --------+-------------------+------------------+---------------------+--------
+         ext    | jsquery_cmp       | integer          | jsquery, jsquery    | normal
+         ext    | jsquery_eq        | boolean          | jsquery, jsquery    | normal
+         ext    | jsquery_ge        | boolean          | jsquery, jsquery    | normal
+         ext    | jsquery_gt        | boolean          | jsquery, jsquery    | normal
+         ext    | jsquery_hash      | integer          | jsquery             | normal
+         ext    | jsquery_in        | jsquery          | cstring             | normal
+         ext    | jsquery_join_and  | jsquery          | jsquery, jsquery    | normal
+         ext    | jsquery_join_or   | jsquery          | jsquery, jsquery    | normal
+         ext    | jsquery_json_exec | boolean          | jsquery, jsonb      | normal
+         ext    | jsquery_le        | boolean          | jsquery, jsquery    | normal
+         ext    | jsquery_lt        | boolean          | jsquery, jsquery    | normal
+         ext    | jsquery_ne        | boolean          | jsquery, jsquery    | normal
+         ext    | jsquery_not       | jsquery          | jsquery             | normal
+         ext    | jsquery_out       | cstring          | jsquery             | normal
+        (14 rows)
+
+```
+
+List temporal_table extension
+
+```
+	\df ve*
+                             List of functions
+   Schema   |    Name    | Result data type | Argument data types |  Type
+------------+------------+------------------+---------------------+---------
+ ext        | versioning | trigger          |                     | trigger
+ pg_catalog | version    | text             |                     | normal
+(2 rows)
+```
+
+6. Have a look on tables
+
+```
+ethercis=# \dt ehr.*
+                 List of relations
+ Schema |         Name          | Type  |  Owner
+--------+-----------------------+-------+----------
+ ehr    | access                | table | postgres
+ ehr    | attestation           | table | postgres
+ ehr    | attested_view         | table | postgres
+ ehr    | compo_xref            | table | postgres
+ ehr    | composition           | table | postgres
+ ehr    | composition_history   | table | postgres
+ ehr    | concept               | table | postgres
+ ehr    | containment           | table | postgres
+ ehr    | contribution          | table | postgres
+ ehr    | contribution_history  | table | postgres
+ ehr    | ehr                   | table | postgres
+ ehr    | entry                 | table | postgres
+ ehr    | entry_history         | table | postgres
+ ehr    | event_context         | table | postgres
+ ehr    | event_context_history | table | postgres
+ ehr    | heading               | table | postgres
+ ehr    | identifier            | table | postgres
+ ehr    | language              | table | postgres
+ ehr    | participation         | table | postgres
+ ehr    | participation_history | table | postgres
+ ehr    | party_identified      | table | postgres
+ ehr    | schema_version        | table | postgres
+ ehr    | session_log           | table | postgres
+ ehr    | status                | table | postgres
+ ehr    | status_history        | table | postgres
+ ehr    | system                | table | postgres
+ ehr    | template              | table | postgres
+ ehr    | template_heading_xref | table | postgres
+ ehr    | template_meta         | table | postgres
+ ehr    | terminology_provider  | table | postgres
+ ehr    | territory             | table | postgres
+(31 rows)
+```
+
+Check some contents (only concept, language and territory are pre-populated)
+
+```
+ethercis=# select * from ehr.language;
+ code  |         description
+-------+------------------------------
+ af    | Afrikaans
+ sq    | Albanian
+ ar-sa | Arabic (Saudi Arabia)
+ ar-iq | Arabic (Iraq)
+ ar-eg | Arabic (Egypt)
+ ar-ly | Arabic (Libya)
+ ar-dz | Arabic (Algeria)
+ ar-ma | Arabic (Morocco)
+ ar-tn | Arabic (Tunisia)
+ ar-om | Arabic (Oman)
+ ar-ye | Arabic (Yemen)
+ ar-sy | Arabic (Syria)
+ ar-jo | Arabic (Jordan)
+ ar-lb | Arabic (Lebano
+ ....
+```
+
+NB. Don't forget to terminate your SQL statement with ';'
+
+
 TROUBLE SHOOTING
 ================
 
@@ -266,6 +435,25 @@ And kill the process by:
 
 and check if the process is actually killed (repeat the ps command)
 
+#### Failed to do a 'git clone'
+
+Depending on the OS version (or VM image) git clone can fail with the following error:
+
+```Peer reports incompatible or unsupported protocol version```
+
+This requires updating the OS. One way to do this is to execute:
+
+```yum update -y```
+
+This execution is suggested in install-db script.
+
+NB. The full update can take some time (~30+ mn)
+
+#### Gradle flyway fails
+
+It can happen if pg_hba.conf permission is not properly setup, the authentication for user postgres should be set
+to 'trust' during the installation process. The script normally insert a directive to trust any during the installation
+process, this is removed at the end of the execution.
 
 Windows Installation Notes
 ======

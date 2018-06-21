@@ -7,6 +7,12 @@ C.Chevalley, Ripple Foundation
 
 How to install an EtherCIS platform (eg. ethercis server + postgresql DB).
 
+Warning
+-------
+
+In the following, it is assumed this installation is done with root privileges. Depending on your system
+configuration, you may have to use ```sudo``` to perform the commands.
+
 Requirements
 ------------
 
@@ -70,13 +76,20 @@ at this stage, you should have a directory containing the deploy-n-scripts distr
 
 4. go in the v1.1.2 directory for the following
 
-```cd deploy-n-scripts/ethercis-install/
+```cd deploy-n-scripts/ethercis-install/v1.2.0```
+
+change the scripts to be executable
+
+```chmod +x *.sh```
 
 5. Install Postgresql 10 (this can take several minutes...)
 
     ```#>  ./install-db.sh```
 
-This install script will install postgresql-10 on the system, compile and installl extensions required by ethercis
+The script will prompt you to perform an update of the OS. We recommend to accept this option (lengthy) since it will 
+install/updates all required development tools, utilities required to compile and run EtherCIS.
+
+This install script then will proceed with the installation ofy postgresql-10 on the system, compile and install extensions required by ethercis
 (jsquery, temporal_tables), configure the DB under schema ethercis and preload the reference tables.
 
 The script prompt for enabling postgresql start at boot time (recommended)

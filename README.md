@@ -502,7 +502,8 @@ EtherCIS launch script for Windows
 
 An example script is provided in the scripts repository.
 
-#### Further steps
+Further steps
+----
 
 It is rather important to edit file ```/etc/opt/ecis/services.properties``` in particular:
 

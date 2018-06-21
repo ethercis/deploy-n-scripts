@@ -59,7 +59,18 @@ Installation Process
 
 3. clone/get the installation repository for v1.1.2 from GitHub (copy the link from GitHub)
 
+see https://www.digitalocean.com/community/tutorials/how-to-install-git-on-centos-7 to install git on your host
+if not yet installed:
+
+```sudo make install```
+```git --version```
+```sudo git clone https://github.com/ethercis/deploy-n-scripts.git```
+
+at this stage, you should have a directory containing the deploy-n-scripts distribution
+
 4. go in the v1.1.2 directory for the following
+
+```cd deploy-n-scripts/ethercis-install/
 
 5. Install Postgresql 10 (this can take several minutes...)
 

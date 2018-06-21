@@ -1,0 +1,10 @@
+[Unit]
+Description=EtherCIS openEHR CDR
+
+[Service]
+ExecStart=/home/ethercis/ecis-server
+Type=simple
+User=ethercis
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,167 @@
+Package
+=======
+EtherCIS 1.1.0-PRERELEASE 17.11.2017
+
+License
+=======
+Copyright (c) Ripple Foundation CIC Ltd, UK, 2017
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Content
+=======
+ecis_etc:
+total 16
+drwxrwxrwx. 5 root root   67 Nov 14 22:53 knowledge
+-rwxrwxrwx. 1 root root  651 Nov 15 04:33 log4j.xml
+-rwxrwxrwx. 1 root root 5208 Jul 14 00:31 logging.properties
+drwxrwxrwx. 2 root root   29 Nov 14 22:52 security
+-rwxrwxrwx. 1 root root 3630 Jul 13 23:25 services.properties
+
+ecis_etc/knowledge:
+total 4
+drwxrwxrwx. 2 root root    6 Nov 14 22:52 archetypes
+drwxrwxrwx. 2 root root 4096 Nov 14 22:53 operational_templates
+drwxrwxrwx. 2 root root    6 Nov 14 22:53 templates
+
+ecis_etc/knowledge/archetypes:
+total 0
+
+ecis_etc/knowledge/operational_templates:
+total 15828
+-rwxrwxrwx. 1 root root  275010 Oct 15  2015 action test.opt
+-rwxrwxrwx. 1 root root   49930 Jun 16 03:46 Allergies.opt
+-rwxrwxrwx. 1 root root  159490 Jun 29 12:12 Body Mass History (NWIS).opt
+-rwxrwxrwx. 1 root root  303133 Aug  1  2016 DiADeM Assessment.v0.opt
+-rwxrwxrwx. 1 root root  382903 Mar 30  2017 DiADeM Assessment.v1.opt
+-rwxrwxrwx. 1 root root   99975 Dec 21  2016 DR_Screening.opt
+-rwxrwxrwx. 1 root root  496136 Oct 15  2015 DRS Fundus Severity for od doctor form.opt
+-rwxrwxrwx. 1 root root  496136 Oct 15  2015 DRS Fundus Severity for os doctor form.opt
+-rwxrwxrwx. 1 root root  128753 Oct 15  2015 ECIS EVALUATION TEST.opt
+-rwxrwxrwx. 1 root root  109483 Jul 21 00:23 EHRN Admit and discharge details.opt
+-rwxrwxrwx. 1 root root   51800 Jul 19 01:23 EHRN Admit interview.opt
+-rwxrwxrwx. 1 root root  210343 Sep 18 23:44 EHRN Episode details.opt
+-rwxrwxrwx. 1 root root  146473 Jul 15 06:39 EHRN Massage service.opt
+-rwxrwxrwx. 1 root root  133534 Jul 15 06:33 EHRN Yoga service.opt
+-rwxrwxrwx. 1 root root 1449771 Dec  2  2015 GP Encounter Event - LCR (composition).v2.opt
+-rwxrwxrwx. 1 root root  106056 Jun 30 12:43 IDCR - Adverse Reaction List.v1.opt
+-rwxrwxrwx. 1 root root   66110 Dec 21  2016 IDCR Allergies List.v0.opt
+-rwxrwxrwx. 1 root root  117003 Aug 27  2015 IDCR - End of Life Patient Preferences.opt
+-rwxrwxrwx. 1 root root  160179 Jun 30 12:44 IDCR - End of Life Patient Preferences.v0.opt
+-rwxrwxrwx. 1 root root  166282 Aug 27  2015 IDCR  - Generic MDT Output Report.opt
+-rwxrwxrwx. 1 root root   58003 Jun 30 12:44 IDCR - Immunisation summary.v0.opt
+-rwxrwxrwx. 1 root root  112723 Aug 27  2015 IDCR  - Laboratory Order.opt
+-rwxrwxrwx. 1 root root  150317 Jun 30 12:44 IDCR - Laboratory Order.v0.opt
+-rwxrwxrwx. 1 root root   67188 Aug 27  2015 IDCR - Laboratory Test Report.opt
+-rwxrwxrwx. 1 root root  204831 Jun 30 12:44 IDCR - Laboratory Test Report.v0.opt
+-rwxrwxrwx. 1 root root   95987 Dec 21  2016 IDCR - Medication List.v0.opt
+-rwxrwxrwx. 1 root root   66214 Apr  8  2016 IDCR Medication List.v0.opt
+-rwxrwxrwx. 1 root root  100502 Jun 30 12:44 IDCR - Medication Statement List.v0.opt
+-rwxrwxrwx. 1 root root  183010 Jun 30 12:44 IDCR - Minimal MDT Output Report.v0.opt
+-rwxrwxrwx. 1 root root   98185 Nov 11 08:47 IDCR - Problem List.v1.opt
+-rwxrwxrwx. 1 root root   52059 Mar 21  2017 IDCR Problem List.v1.opt
+-rwxrwxrwx. 1 root root  100479 Aug 27  2015 IDCR Procedures List.opt
+-rwxrwxrwx. 1 root root  100479 Aug  2  2016 IDCR Procedures List.v0.opt
+-rwxrwxrwx. 1 root root  111242 Jun 30 12:44 IDCR - Procedures List.v1.opt
+-rwxrwxrwx. 1 root root   69700 Jun 30 12:44 IDCR - Relevant contacts.v0.opt
+-rwxrwxrwx. 1 root root  183859 Jun 30 12:44 IDCR - Service Request.v0.opt
+-rwxrwxrwx. 1 root root   99618 Jun 30 12:44 IDCR - Service tracker.v0.opt
+-rwxrwxrwx. 1 root root  256173 Jun 30 12:44 IDCR - Vital Signs Encounter.v1.opt
+-rwxrwxrwx. 1 root root   65464 Aug 27  2015 LCR Allergies List.opt
+-rwxrwxrwx. 1 root root  236226 Aug 27  2015 LCR Handover Summary Report.opt
+-rwxrwxrwx. 1 root root   66307 Aug 27  2015 LCR Medication List.opt
+-rwxrwxrwx. 1 root root   65008 Jan 18  2017 LCR Medication List.v0.opt
+-rwxrwxrwx. 1 root root   50774 Oct 15  2015 LCR Problem List.opt
+-rwxrwxrwx. 1 root root   58625 Aug 27  2015 LCR Relevant Contacts List.opt
+-rwxrwxrwx. 1 root root   57648 Dec  2  2015 LCR Relevant Contacts List.v0.opt
+-rwxrwxrwx. 1 root root   87872 Oct 15  2015 MDT Output Report.opt
+-rwxrwxrwx. 1 root root   91467 Aug 27  2015 Medinfo Vital signs.opt
+-rwxrwxrwx. 1 root root   18767 Nov 17  2015 NCHCD - Clinical notes.v0.opt
+-rwxrwxrwx. 1 root root 3466701 Oct 15  2015 Nurse Form v2.opt
+-rwxrwxrwx. 1 root root   52336 Oct 15  2015 prescription.opt
+-rwxrwxrwx. 1 root root   51505 Apr  5  2016 PSKY - Healthcheck.v0.opt
+-rwxrwxrwx. 1 root root  628133 Nov 22  2016 REMORA questionnaire v0.opt
+-rwxrwxrwx. 1 root root   19220 Jun 30 12:44 RIPPLE - Clinical Notes.v1.opt
+-rwxrwxrwx. 1 root root  464228 Dec  2  2015 RIPPLE - Conformance Test template.opt
+-rwxrwxrwx. 1 root root   23478 Apr 22  2017 Ripple Dashboard Cache.v1.opt
+-rwxrwxrwx. 1 root root   49517 Jun 30 12:44 RIPPLE - Height_Weight.v1.opt
+-rwxrwxrwx. 1 root root  296965 Aug 27  2015 RIPPLE - Minimal referral.opt
+-rwxrwxrwx. 1 root root  291368 Mar 18  2016 RIPPLE - Minimal referral.v0.opt
+-rwxrwxrwx. 1 root root   19218 Jun 30 12:44 RIPPLE - Personal Notes.v1.opt
+-rwxrwxrwx. 1 root root  255028 Oct 30  2015 Ripple RCM - Chemo monitoring Report.opt
+-rwxrwxrwx. 1 root root 1955459 Oct 26  2015 UK AoMRC Outpatient Letter.opt
+-rwxrwxrwx. 1 root root  481357 Aug  2  2016 Vital Signs Encounter (Composition).opt
+
+ecis_etc/knowledge/templates:
+total 0
+
+ecis_etc/security:
+total 4
+-rwxrwxrwx. 1 root root 1001 Jul 13 23:23 authenticate.ini
+
+ecis_opt_bin:
+total 16
+-rwxrwxrwx. 1 root root  991 Oct 27  2015 create_subject.sql
+-rwxrwxrwx. 1 root root  788 Oct 27  2015 delete_subject.sql
+-rwxrwxrwx. 1 root root 1669 Oct 28  2015 ecis-dump-opt
+-rwxrwxrwx. 1 root root 2719 Jul 13 22:57 populate-concept
+
+ecis_opt_lib:
+total 8
+drwxrwxrwx. 2 root root 4096 Nov 14 22:56 deploy
+drwxrwxrwx. 2 root root 4096 Nov 14 22:56 system
+
+ecis_opt_lib/deploy/1.1.2:
+
+aql-processor-1.1.2-SNAPSHOT.jar
+ecis-authenticate-service-1.1.2-SNAPSHOT.jar
+ecis-composition-service-1.1.2-SNAPSHOT.jar
+ecis-core-1.1.2-SNAPSHOT.jar
+ecis-ehrdao-1.1.2-SNAPSHOT.jar
+ecis-ehr-service-1.1.2-SNAPSHOT.jar
+ecis-knowledge-cache-1.1.2-SNAPSHOT.jar
+ecis-knowledge-service-1.1.2-SNAPSHOT.jar
+ecis-logon-service-1.1.2-SNAPSHOT.jar
+ecis-party-identified-service-1.1.2-SNAPSHOT.jar
+ecis-query-service-1.1.2-SNAPSHOT.jar
+ecis-resource-access-service-1.1.2-SNAPSHOT.jar
+ecis-servicemanager-1.1.2-SNAPSHOT.jar
+ecis-system-service-1.1.2-SNAPSHOT.jar
+ecis-transform-1.1.2-SNAPSHOT.jar
+ecis-validation-1.1.2-SNAPSHOT.jar
+ecis-vehr-service-1.1.2-SNAPSHOT.jar
+ecis-webtemplate-1.1.2-SNAPSHOT.jar
+jooq-pg-1.1.2-SNAPSHOT.jar
+
+ecis_opt_lib/system/ecis-dependencies:
+
+CompositionTemplate.jar
+composition_xml.jar
+jooq-3.7.3.jar
+openEHR.v1.OperationalTemplate.jar
+openEHR.v1.Template.jar
+postgresql-9.4.1212.jar
+thinkehr-framework-jsonlib-2.3.0-JL32.jar
+types.jar
+
+ecis_opt_lib/system/openehr-java-lib:
+
+mini-termserv-1.0.14-ec1-SNAPSHOT.jar
+openehr-aom-1.0.14-ec1-SNAPSHOT.jar
+openehr-rm-domain-1.0.14-ec1-SNAPSHOT.jar
+xml-binding-1.0.14-ec1-SNAPSHOT.jar
+oet-parser-1.0.14-ec1-SNAPSHOT.jar
+openehr-rm-core-1.0.14-ec1-SNAPSHOT.jar
+rm-builder-1.0.14-ec1-SNAPSHOT.jar
+
+

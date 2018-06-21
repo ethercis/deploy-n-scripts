@@ -1,7 +1,7 @@
 Ethercis Platform Installation
 ==============================
 
-v1.1.2 Apr 11, 2018
+V1.2.0 
 
 C.Chevalley, Ripple Foundation
 
@@ -69,12 +69,14 @@ see https://www.digitalocean.com/community/tutorials/how-to-install-git-on-cento
 if not yet installed:
 
 ```sudo make install```
+
 ```git --version```
+
 ```sudo git clone https://github.com/ethercis/deploy-n-scripts.git```
 
 at this stage, you should have a directory containing the deploy-n-scripts distribution
 
-4. go in the v1.1.2 directory for the following
+4. go in the v1.2.0 directory for the following
 
 ```cd deploy-n-scripts/ethercis-install/v1.2.0```
 
@@ -499,6 +501,17 @@ EtherCIS launch script for Windows
 ----
 
 An example script is provided in the scripts repository.
+
+#### Further steps
+
+It is rather important to edit file ```/etc/opt/ecis/services.properties``` in particular:
+
+- the hostname for http should be set to something else than ```localhost```. Use either the resolvable hostname or
+the IP address you want EtherCIS to bind to.
+- All SSL (HTTPS) configuration is commented out since you'll need to generate or use your existing certificate and 
+generate a matching keystore
+- the authentication is very basic here, you can connect to the platform using 'guest' and password 'guest'. Please
+do not use this production ;-)
 
 
 

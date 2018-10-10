@@ -497,10 +497,192 @@ package/windows/pg_extensions. Other pre-compiled extensions can be found at:
 
 If you want to compile these extensions for another OS/PG combination, please refer to this [cookbook](https://wiki.postgresql.org/wiki/Building_and_Installing_PostgreSQL_Extension_Modules). 
 
+Prerequisites
+----
+
+Ethercis requires Java 8+, make sure JAVA_HOME is set or set it up in the launch script (ecis-server.bat)
+
+Directory Structure
+----
+
+A simple directory structure to install EtherCIS could be as follows:
+
+	PS C:\Users\christian\Documents\EtherCIS> tree
+	Folder PATH listing
+	Volume serial number is A2CD-F7EF
+	C:.
+	└───home
+	    ├───bin
+	    ├───etc
+	    │   ├───knowledge
+	    │   │   ├───archetypes
+	    │   │   ├───operational_templates
+	    │   │   └───templates
+	    │   └───security
+	    ├───lib
+	    │   ├───applib
+	    │   │   └───openehr-java-lib
+	    │   ├───backup
+	    │   ├───deploy
+	    │   └───syslib
+	    └───log
+	PS C:\Users\christian\Documents\EtherCIS>
+
+Where:
+
+```home/etc``` contains the configuration files:
+
+    Directory: C:\Users\christian\Documents\EtherCIS\home\etc
+
+
+	Mode                LastWriteTime     Length Name
+	----                -------------     ------ ----
+	d----         8/20/2018  10:24 AM            knowledge
+	d----         8/23/2018  10:47 AM            security
+	-a---         7/14/2017  11:23 AM        640 log4j.xml
+	-a---         7/14/2017  11:31 AM       5208 logging.properties
+	-a---         8/22/2018   1:50 PM       8049 services.properties
+	-a---          9/4/2012   9:10 PM     452634 terminology.xml
+
+and
+
+    Directory: C:\Users\christian\Documents\EtherCIS\home\etc\security
+	
+	Mode                LastWriteTime     Length Name
+	----                -------------     ------ ----
+	-a---         5/28/2018   3:08 PM       2279 .keystore
+	-a---          6/6/2018   3:25 PM        932 authenticate.ini
+	-a---          6/1/2018   4:35 PM         10 jwt.cfg
+
+```home/lib``` contains the jar files used by the application
+```home/bin``` contains the scripts used to launch the application
+
+Building an Installation under Windows
+----
+Assuming the above directory structure is setup, the required files are provided in GitHub as follows:
+
+```deploy-n-scripts/ethercis-install/v1.2.0/ecis_etc/``` -> home/etc
+```deploy-n-scripts/ethercis-install/v1.2.0/ecis_opt_lib/``` -> home/lib
+
+The launch script copied from ``` deploy-n-scripts/scripts/windows/1.2.0/ecis-server.bat```, and set the variables according to your deployment. For example, in my environment, with the above structure, the script is as follows:
+
+	REM  description: Controls Ethercis Server
+	REM  processname: ecis-server
+	REM
+	REM  SCRIPT created 14-07-2017, CCH
+	REM -----------------------------------------------------------------------------------
+	@ECHO OFF
+	REM UNAME=`uname`
+	REM HOSTNAME=`hostname`
+	set RUNTIME_HOME=C:\Users\christian\Documents\EtherCIS\home
+	REM set ECIS_DEPLOY_BASE=C:\Users\christian\Documents\EtherCIS\home\lib
+	set ECIS_DEPLOY_BASE=C:\Development\Dropbox\eCIS_Development\eCIS-LIB
+	set APPLIB=%ECIS_DEPLOY_BASE%\applib
+	set LIB=%ECIS_DEPLOY_BASE%\deploy
+	
+	REM Mailer configuration
+	REM ECIS_MAILER=echo
+	
+	REM use the right jvm library depending on the OS
+	REM NB: EtherCIS requires java 8
+	set JAVA_HOME=C:\Java\jre1.8.0_65
+	
+	REM #force to use IPv4 so Jetty can bind to it instead of IPv6...
+	set _JAVA_OPTIONS="-Djava.net.preferIPv4Stack=true"
+	
+	REM # runtime parameters
+	set JVM=%JAVA_HOME%\bin\java
+	set RUNTIME_ETC=%RUNTIME_HOME%\etc
+	set RUNTIME_LOG=%RUNTIME_HOME%\log
+	REM #specifies the query dialect used in HTTP requests (REST)
+	set RUNTIME_DIALECT=EHRSCAPE
+	REM # the port address to bind to  
+	set SERVER_PORT=8081 
+	REM # the network address to bind to
+	REM # get the host IPV4 address
+	set SERVER_HOST=192.168.100.7
+	
+	set JOOQ_DIALECT=POSTGRES
+	set JOOQ_DB_PORT=5432
+	set JOOQ_DB_HOST=localhost
+	set JOOQ_DB_SCHEMA=ethercis
+	set JOOQ_URL=jdbc:postgresql://%JOOQ_DB_HOST%:%JOOQ_DB_PORT%/%JOOQ_DB_SCHEMA%
+	set JOOQ_DB_LOGIN=postgres
+	set JOOQ_DB_PASSWORD=postgres
+	
+	set ETHERCIS_VERSION=1.2.0-SNAPSHOT
+	
+	echo Launching EtherCIS version %ETHERCIS_VERSION% on host %SERVER_HOST%, port %SERVER_PORT%
+	
+	set CLASSPATH=.\;^
+	%JAVA_HOME%\lib;^
+	%LIB%\ecis-core-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-knowledge-cache-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-ehrdao-%ETHERCIS_VERSION%.jar;^
+	%LIB%\jooq-pg-%ETHERCIS_VERSION%.jar;^
+	%LIB%\aql-processor-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-validation-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-transform-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-webtemplate-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-meta-data-cache-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-servicemanager-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-authenticate-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-knowledge-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-logon-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-resource-access-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-composition-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-partyidentified-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-system-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-ehr-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-vehr-service-%ETHERCIS_VERSION%.jar;^
+	%LIB%\ecis-query-service-%ETHERCIS_VERSION%.jar;^
+	%APPLIB%\openehr-java-lib\*;^
+	%APPLIB%\ecis-dependencies\*
+	
+	REM launch server
+	REM ecis server is run as user ethercis
+	REM echo %CLASSPATH%
+	%JVM%  ^
+	-server  ^
+	-XX:-EliminateLocks  ^
+	-XX:-UseVMInterruptibleIO  ^
+	-cp %CLASSPATH%  ^
+	-Xdebug  ^
+	-Xrunjdwp:transport=dt_socket,address=8000,suspend=n,server=y  ^
+	-Dcom.sun.management.jmxremote ^
+	-Dcom.sun.management.jmxremote.port=8999 ^
+	-Dcom.sun.management.jmxremote.local.only=false ^
+	-Dcom.sun.management.jmxremote.ssl=false ^
+	-Dcom.sun.management.jmxremote.authenticate=false ^
+	-Djava.util.logging.config.file=%RUNTIME_ETC%/logging.properties  ^
+	-Dlog4j.configurationFile=%RUNTIME_ETC%/log4j.xml  ^
+	-Djava.awt.headless=true  ^
+	-Djdbc.drivers=org.postgresql.Driver  ^
+	-Dserver.node.name=%HOSTNAME%  ^
+	-Dfile.encoding=UTF-8  ^
+	-Djooq.dialect=%JOOQ_DIALECT%  ^
+	-Djooq.url=%JOOQ_URL%  ^
+	-Djooq.login=%JOOQ_DB_LOGIN%  ^
+	-Djooq.password=%JOOQ_DB_PASSWORD%  ^
+	-Druntime.etc=%RUNTIME_ETC%  ^
+	-Druntime.log=%RUNTIME_LOG%  ^
+	-Dserver.hostname=%SERVER_HOST% ^
+	 com.ethercis.vehr.Launcher  ^
+	-propertyFile %RUNTIME_ETC%/services.properties
+	
+	REM -- use services.properties for 
+	REM -server_host %SERVER_HOST%  ^
+	REM -server_port 8080
+	 
+	REM end of file
+
+You should also finalize the configuration in ```etc/services.properties``` depending on your site.
+
 EtherCIS launch script for Windows
 ----
 
-An example script is provided in the scripts repository.
+An example script (```ecis-server.bat```) is provided in the scripts repository.
+
 
 Further steps
 ----

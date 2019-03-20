@@ -1,0 +1,47 @@
+<assembly>
+    <id>core</id>
+
+    <formats>
+        <format>jar</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${user.deploy}</directory>
+            <includes>
+                <include>${user.deploy}/**</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <!--<files>-->
+    <!--<file>-->
+    <!--<source> ${user.deploy}/**</source>-->
+    <!--<outputDirectory>${user.deploy}</outputDirectory>-->
+    <!--</file>-->
+    <!--</files>-->
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <useTransitiveDependencies>true</useTransitiveDependencies>
+            <unpack>true</unpack>
+            <scope>runtime</scope>
+            <includes>
+                <include>*:jar:*</include>
+            </includes>
+            <excludes>
+                <exclude>*:sources</exclude>
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+    <moduleSets>
+        <moduleSet>
+            <useAllReactorProjects>true</useAllReactorProjects>
+            <binaries>
+                <outputDirectory>${user.deploy}</outputDirectory>
+                <unpack>true</unpack>
+            </binaries>
+        </moduleSet>
+    </moduleSets>
+</assembly>

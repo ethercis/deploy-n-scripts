@@ -169,24 +169,43 @@
             <version>${openehr.version}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.openehr</groupId>-->
-            <!--<artifactId>thinkehr-framework-jsonlib</artifactId>-->
-            <!--<version>2.3.0-JL32</version>-->
-            <!--&lt;!&ndash;<systemPath>${basedir}/lib/thinkehr-framework-jsonlib-2.3.0-JL32.jar</systemPath>&ndash;&gt;-->
-            <!--&lt;!&ndash;<scope>system</scope>&ndash;&gt;-->
+        <!--<groupId>org.openehr</groupId>-->
+        <!--<artifactId>thinkehr-framework-jsonlib</artifactId>-->
+        <!--<version>2.3.0-JL32</version>-->
+        <!--&lt;!&ndash;<systemPath>${basedir}/lib/thinkehr-framework-jsonlib-2.3.0-JL32.jar</systemPath>&ndash;&gt;-->
+        <!--&lt;!&ndash;<scope>system</scope>&ndash;&gt;-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>com.ecis</groupId>-->
-            <!--<artifactId>common</artifactId>-->
-            <!--<version>LATEST</version>-->
-            <!--&lt;!&ndash;<systemPath>${basedir}/lib/types.jar</systemPath>&ndash;&gt;-->
-            <!--&lt;!&ndash;<scope>system</scope>&ndash;&gt;-->
+        <!--<groupId>com.ecis</groupId>-->
+        <!--<artifactId>common</artifactId>-->
+        <!--<version>LATEST</version>-->
+        <!--&lt;!&ndash;<systemPath>${basedir}/lib/types.jar</systemPath>&ndash;&gt;-->
+        <!--&lt;!&ndash;<scope>system</scope>&ndash;&gt;-->
         <!--</dependency>-->
     </dependencies>
 
     <build>
         <directory>${user.distribution}</directory>
         <plugins>
+            <plugin>
+                <groupId>com.googlecode.addjars-maven-plugin</groupId>
+                <artifactId>addjars-maven-plugin</artifactId>
+                <version>1.0.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>add-jars</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/lib</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>

@@ -218,6 +218,14 @@
                             <goal>single</goal>
                         </goals>
                         <configuration>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>
+                                        com.ethercis.vehr.Launcher
+                                    </mainClass>
+                                </manifest>
+                            </archive>
                             <descriptors>
                                 <descriptor>ecis-core-assembly.xml</descriptor>
                             </descriptors>

@@ -1,7 +1,6 @@
 # Package the distribution in a single JAR
 
 This module is used to package the compilation results from ehrservice and vEhr into a single JAR file.
-The exception at this stage is that Marand's FLAT cannot be packaged. 
 
 To produce a single jar, run:
 
@@ -15,3 +14,5 @@ The single jar will be created in `user.distribution`. The shaded jars are extra
         <user.distribution>../../ethercis-distribution</user.distribution>
         <user.deploy>../../ethercis-deploy</user.deploy>
 ```
+
+EtherCIS can be then simply launched with that single jar in the classpath

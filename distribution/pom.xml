@@ -15,7 +15,7 @@
 
     <groupId>ethercis</groupId>
     <version>1.3.0-SNAPSHOT</version>
-    <artifactId>distribution</artifactId>
+    <artifactId>ethercis</artifactId>
 
     <packaging>jar</packaging>
 

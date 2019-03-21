@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for distribution" enabled="true">
+      <profile name="Annotation profile for ethercis" enabled="true">
         <sourceOutputDir name="../../ethercis-distribution/generated-sources/annotations" />
         <sourceTestOutputDir name="../../ethercis-distribution/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

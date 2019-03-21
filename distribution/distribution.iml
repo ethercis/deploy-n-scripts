@@ -11,31 +11,21 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.jooq:jooq-codegen-maven:3.10.5" level="project" />
-    <orderEntry type="library" name="Maven: org.jooq:jooq-codegen:3.10.5" level="project" />
-    <orderEntry type="library" name="Maven: org.jooq:jooq:3.10.5" level="project" />
-    <orderEntry type="library" name="Maven: org.jooq:jooq-meta:3.10.5" level="project" />
-    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.5" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.2" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:txw2:2.3.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.istack:istack-commons-runtime:3.0.8" level="project" />
-    <orderEntry type="library" name="Maven: org.jvnet.staxex:stax-ex:1.8.1" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.16" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
-    <orderEntry type="library" name="Maven: ethercis:aql-processor:1.3.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: ethercis:ecis-core:1.3.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.openehr:openEHR.v1.OperationalTemplate:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.openehr:openEHR.v1.Template:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:4.11" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.openehr:thinkehr-framework-jsonlib:2.3.0-JL32" level="project" />
-    <orderEntry type="library" name="Maven: ethercis:ecis-ehrdao:1.3.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: ethercis:jooq-pg:1.3.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:jooq-codegen-maven:3.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:jooq-codegen:3.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:jooq:3.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:jooq-meta:3.10.0" level="project" />
+    <orderEntry type="library" name="Maven: ethercis:aql-processor:1.3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: ethercis:ecis-core:1.3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: ethercis:ecis-ehrdao:1.3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" name="Maven: ethercis:jooq-pg:1.3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.jooq:jooq-codegen-maven:3.11.9" level="project" />
+    <orderEntry type="library" name="Maven: org.jooq:jooq-codegen:3.11.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:2.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-project:2.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-settings:2.2.1" level="project" />
@@ -51,6 +41,17 @@
     <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:2.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1" level="project" />
     <orderEntry type="library" name="Maven: classworlds:classworlds:1.1-alpha-2" level="project" />
+    <orderEntry type="library" name="Maven: org.jooq:jooq:3.11.9" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.2.12" level="project" />
+    <orderEntry type="library" name="Maven: org.jooq:jooq-meta:3.11.9" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.5" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.jaxb:txw2:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.istack:istack-commons-runtime:3.0.8" level="project" />
+    <orderEntry type="library" name="Maven: org.jvnet.staxex:stax-ex:1.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.16" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: ethercis:ecis-knowledge-cache:1.3.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: ethercis:ecis-meta-data-cache:1.3.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: ethercis:ecis-transform:1.3.0-SNAPSHOT" level="project" />
